@@ -47,6 +47,7 @@ function btoa(s) {
  * Lookup table for btoa(), which converts a six-bit number into the
  * corresponding ASCII character.
  */
+
 const keyString = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
 
 function btoaLookup(index) {

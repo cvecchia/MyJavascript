@@ -40,7 +40,8 @@ function btoa(s) {
       }
     }
   }
-  return out;
+  
+  return out.concat("=");
 }
 
 /**

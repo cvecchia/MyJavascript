@@ -47,12 +47,11 @@ function btoa(s) {
  * Lookup table for btoa(), which converts a six-bit number into the
  * corresponding ASCII character.
  */
-const key-str =
-  "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
+const keyString = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
 
 function btoaLookup(index) {
   if (index >= 0 && index < 64) {
-    return key-str[index];
+    return keyString[index];
   }
 
   // Throw INVALID_CHARACTER_ERR exception here -- won't be hit in the tests.

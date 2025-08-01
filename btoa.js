@@ -41,7 +41,7 @@ function btoa(s) {
     }
   }
   
-  return out.concat("=");
+  return out;
 }
 
 /**

@@ -59,4 +59,3 @@ function btoaLookup(index) {
   return undefined;
 }
 
-module.exports = btoa;

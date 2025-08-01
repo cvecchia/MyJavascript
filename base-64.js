@@ -1,25 +1,3 @@
-var InvalidCharacterError = function(message) {
-
-		this.message = message;
-
-	};
-
-	InvalidCharacterError.prototype = new Error;
-
-	InvalidCharacterError.prototype.name = 'InvalidCharacterError';
-
-
-	var error = function(message) {
-
-		// Note: the error messages used throughout this file match those used by
-
-		// the native `atob`/`btoa` implementation in Chromium.
-
-		throw new InvalidCharacterError(message);
-
-	};
-
-
 	var TABLE = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
 
 	// http://whatwg.org/html/common-microsyntaxes.html#space-character
@@ -35,7 +13,7 @@ var InvalidCharacterError = function(message) {
 
 	// implementation. https://gist.github.com/atk/1020396
 
-	var decode = function(input) {
+	function atob(input) {
 
 		input = String(input)
 
@@ -110,7 +88,7 @@ var InvalidCharacterError = function(message) {
 
 	// HTML Standard: http://whatwg.org/html/webappapis.html#dom-windowbase64-btoa
 
-	var encode = function(input) {
+	function btoa(input) {
 
 		input = String(input);
 

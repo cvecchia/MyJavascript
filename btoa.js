@@ -48,11 +48,11 @@ function btoa(s) {
  * corresponding ASCII character.
  */
 
-const keyString = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
-
 function btoaLookup(index) {
+  var CV_keyString = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
+
   if (index >= 0 && index < 64) {
-    return keyString[index];
+    return CV_keyString[index];
   }
 
   // Throw INVALID_CHARACTER_ERR exception here -- won't be hit in the tests.
